@@ -24,18 +24,23 @@ btn.addEventListener("click", function () {
   emailCell.textContent = email.value
 
   //create a td tag and insert the value in that tag
-  let radio = document.getElementsByName("gender")
+ 
   
-  let genderCell = document.createElement("td")
-  for (count=0;count<2;count++){
-    radio[count].addEventListener("click",function(){
-      genderCell.textContent = radio.target.value
-    })
+  let genderCell = document.createElement("td");
+  for (let i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+      genderCell.textContent = gender[i].value; // Get the selected gender's value
+      break;
+    }
   }
+
 
   //create a td tag
   let courseCell = document.createElement("td");
-  courseCell.textContent = course.value;
+  if(course.checked){
+    courseCell.textContent = course.value;
+  }
+  
 
   //create a td tag and create a button and set the text for the button
   
@@ -61,8 +66,8 @@ btn.addEventListener("click", function () {
   datas.appendChild(nameCell)
   datas.appendChild(ageCell)
   datas.appendChild(courseCell)
-  datas.appendChild(emailCell)
   datas.appendChild(genderCell)
+  datas.appendChild(emailCell)
   datas.appendChild(delet_Cell)
 
   //add the full rows for table
