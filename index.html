@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <forms>
+        <table border="2">
+            <!--name-->
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type=text id="name" placeholder="your name" required></td>
+            </tr>
+
+            <!--age-->
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" placeholder="your age"></td>
+            </tr>
+
+            <!--gender-->
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td><input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+
+            <!--courses-->
+            <tr>
+                <td>Course</td>
+                <td>
+                    <select id = "select" style="width:100%;">
+                        <option>Javascript</option>
+                        <option>python</option>
+                        <option>java</option>
+                        <option>c++</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!--email-->
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" placeholder="your mail"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button style="width: 100%; background-color:aqua" id = "btn">Submit</button></td>
+            </tr>
+        </table>
+    </forms>
+    <br>
+    <br>
+
+    <forms>
+        <table border=2 style="padding: 0.625rem;" id = "display">
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>COURSE</th>
+                <th>GENDER</th>
+                <th>EMAIL</th>
+                <th>ACTION</th>
+            </tr>
+
+            <tr id = "datas">   
+            </tr>
+        </table>
+    </forms>
+
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>
